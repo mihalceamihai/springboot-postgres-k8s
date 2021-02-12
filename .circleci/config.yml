@@ -4,7 +4,7 @@ executors:
     environment:
       IMAGE_NAME: mihalceamihai/springboot-postgres-k8s
     docker:
-      - image: circleci/buildpack-deps:stretch
+      - image: circleci/buildpack-deps
 jobs:
   build:
     executor: docker-publisher

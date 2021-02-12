@@ -9,6 +9,7 @@ from adoptopenjdk/openjdk11
 MAINTAINER Mihalcea Mihai
 COPY entrypoint.sh /usr/local/bin/
 RUN apt update -y \
+    && apt install apt-utils \
     && apt install -y net-tools \
     && apt auto-remove -y \
     && chmod +x /usr/local/bin/entrypoint.sh \
