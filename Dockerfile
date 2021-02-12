@@ -3,7 +3,7 @@ WORKDIR /workdir
 COPY pom.xml /workdir/
 RUN ["mvn", "verify", "clean", "--fail-never"]
 COPY . /workdir/
-RUN mvn clean install
+RUN mvn clean install -DskipTests=true
 
 from adoptopenjdk/openjdk11
 MAINTAINER Mihalcea Mihai
