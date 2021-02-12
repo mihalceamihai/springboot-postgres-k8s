@@ -1,4 +1,4 @@
-FROM maven:3.6-jdk-8-slim as build-container
+FROM maven:3.6-jdk-11-slim as build-container
 WORKDIR /workdir
 COPY pom.xml /workdir/
 RUN ["mvn", "verify", "clean", "--fail-never"]
