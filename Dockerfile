@@ -6,7 +6,7 @@ COPY . /workdir/
 RUN mvn clean install -DskipTests=true
 
 #from adoptopenjdk/openjdk11
-openjdk:8-slim
+from openjdk:8-slim
 MAINTAINER Mihalcea Mihai
 COPY entrypoint.sh /usr/local/bin/
 RUN apt update -y \
